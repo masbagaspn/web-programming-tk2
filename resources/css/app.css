@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .button {
+        @apply w-fit px-4 py-1.5 text-xs rounded transition;
+    }
+    .button-primary {
+        @apply button bg-blue-600 text-white hover:bg-blue-800;
+    }
+
+    .button-neutral {
+        @apply button border border-neutral-500 bg-transparent text-neutral-950 hover:bg-neutral-800 hover:text-neutral-50;
+    }
+
+    .navigation {
+        @apply py-3 px-4 text-xs rounded-md font-medium cursor-pointer inline-flex items-center gap-1.5 transition;
+    }
+
+    .navigation-active {
+        @apply bg-blue-100 text-blue-600;
+    }
+
+    .navigation-inactive {
+        @apply text-blue-950/70 hover:bg-blue-100/30 hover:text-blue-950;
+    }
+
+    .input-wrapper {
+        @apply flex flex-col gap-2;
+    }
+
+    .input-label {
+        @apply text-xs text-blue-950 opacity-50 font-bold;
+    }
+
+    .input-field {
+        @apply text-sm p-2 border bg-blue-50 rounded focus:outline-blue-300;
+    }
+
+    .alert {
+        @apply animate-alert fixed invisible opacity-0 bottom-8 right-8 text-sm px-4 py-1.5 rounded border-l-4 bg-white shadow-md z-50;
+    }
+
+    .alert-success {
+        @apply border-green-500;
+    }
+
+    .tb-td-text {
+        @apply pl-2;
+    }
+
+    .tb-td-score {
+        @apply text-center;
+    }
+
+    .paginate-links-enabled {
+        @apply p-1 hover:text-blue-600 transition;
+    }
+
+    .paginate-links-disabled {
+        @apply inline-flex items-center cursor-default;
+    }
+
+    .tooltip {
+        @apply absolute w-20 right-1 top-1.5 flex-col bg-white drop-shadow-lg rounded-md z-20 text-[10px] hidden;
+    }
+
+    .tooltip-option {
+        @apply w-full p-2 border-b hover:bg-blue-50 cursor-pointer font-medium;
+    }
+}
